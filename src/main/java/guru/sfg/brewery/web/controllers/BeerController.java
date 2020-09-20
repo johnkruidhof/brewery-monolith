@@ -114,7 +114,7 @@ public class BeerController {
     private PageRequest createPageRequest(int page, int size, Sort.Direction sortDirection, String propertyName) {
         return PageRequest.of(page,
                 size,
-                new Sort(sortDirection, propertyName));
+                Sort.by(sortDirection, propertyName));
     }
 }
 
